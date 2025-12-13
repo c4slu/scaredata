@@ -55,7 +55,6 @@ export function ChartAreaDefault() {
           />
           <Area
             dataKey="desktop"
-            gg
             type="natural"
             fill="var(--color-desktop)"
             fillOpacity={0.4}
