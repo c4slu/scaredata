@@ -1,7 +1,9 @@
+"use client";
 import { Check, ShieldCheck, Upload, Zap } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { ChartAreaDefault } from "./chart";
+import { FileUpload } from "./FileUpload";
 
 export default function HomeSection() {
   return (
@@ -47,7 +49,14 @@ export default function HomeSection() {
               </span>
             </p>
             <div>
-              <Button className="w-full">Select File</Button>
+              <Button
+                className="w-full cursor-pointer"
+                onClick={() => {
+                  window.location.href = "/upload";
+                }}
+              >
+                Select File
+              </Button>
               <span className="w-full flex items-center justify-center text-xs font-light text-muted-foreground pt-2">
                 Supports CSV, Excel, JSON, XML (up to 100MB)
               </span>

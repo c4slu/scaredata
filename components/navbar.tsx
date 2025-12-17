@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
@@ -9,18 +10,38 @@ export default function Navbar() {
         <Image src="/asset.svg" alt="Datalens" width={176} height={93} />
       </div>
       <div className="flex justify-between items-center px-20 py-4 border-b border w-full">
-        <div className="flex items-center gap-3">
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => {
+            window.location.href = "/";
+          }}
+        >
           <Image src="/logo.svg" alt="Datalens" width={30} height={42} />
           <h1 className="text-sm font-medium italic text-[#38D97C]">Data</h1>
         </div>
         <div className="flex items-center gap-8">
-          <span className="text-sm font-medium text-muted-foreground cursor-pointer hover:text-[#38D97C] transition-all duration-300">
+          <span
+            className="text-sm font-medium text-muted-foreground cursor-pointer hover:text-[#38D97C] transition-all duration-300"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
             home
           </span>
-          <span className="text-sm font-medium text-muted-foreground cursor-pointer hover:text-[#38D97C] transition-all duration-300">
+          <span
+            className="text-sm font-medium text-muted-foreground cursor-pointer hover:text-[#38D97C] transition-all duration-300"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
             dashboard
           </span>
-          <Button className="hover:bg-muted-foreground hover:text-white transition-all duration-300 cursor-pointer">
+          <Button
+            className="hover:bg-muted-foreground hover:text-white transition-all duration-300 cursor-pointer"
+            onClick={() => {
+              window.location.href = "/upload";
+            }}
+          >
             <ChevronRight />
             <span>transform</span>
           </Button>

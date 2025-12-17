@@ -8,7 +8,7 @@ import Navbar from "@/components/navbar";
 export default function Home() {
   return (
     <div className="bg-[linear-gradient(180deg,var(--bg-gradient-start),var(--bg-gradient-end))]">
-      <div className="flex flex-col  h-[90vh]">
+      <div className="flex flex-col h-[90vh]">
         <Navbar />
         <HomeSection />
       </div>
