@@ -72,7 +72,8 @@ export class DataAnalyzer {
     );
 
     if (types.size > 1) return "mixed";
-    return types.values().next().value;
+    const firstType = types.values().next().value;
+    return (firstType ?? "mixed") as ColumnAnalysis["type"];
   }
 
   detectIssues(): DataQualityIssue[] {
